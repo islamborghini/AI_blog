@@ -13,8 +13,8 @@ def register(request):
 
             #gets the username and returns it in the success message in blog-home
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Welcome, {username}!')
-            return redirect('blog-home')
+            messages.success(request,'Account created successfuly')
+            return redirect('login')
     else:
         form = UserRegisterForm() 
     #in other case just return the form 
